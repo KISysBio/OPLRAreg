@@ -6,7 +6,7 @@ OPLRAreg is a regression technique based on mathematical programming that splits
 identifies independent linear equations for each region.
 
 
-## Instalation
+## Installing
 
 The easiest way to install these packages is using pip:
 
@@ -19,9 +19,9 @@ Alternatively, you can download the files in this repository and run:
 This will install `oplrareg` package along with its dependencies and it will also create a command `oplrareg`,
 which can be used to run OPLRAreg algorithm.
 
-## Requirements
+### Requirements
 
-For this, you will need:
+To run oplrareg, you will need:
   - Python 3 (We have tested versions 3.5 and 3.6)
   - One of the following MIP solver installed in your system:
       - CPLEX 12.6.3 (commercial or academic license)
@@ -29,18 +29,7 @@ For this, you will need:
         - Linux: https://www.gnu.org/software/glpk/
         - Windows: http://winglpk.sourceforge.net/
 
-
-### Python Requirements
-
-If you prefer to install the package manually, you need to ensure the following packages are installed:
-
-    - Pyomo 5.3
-    - scikit-learn 0.19.0
-    - scipy 0.19.1
-    - numpy 1.13.1
-    - pandas 0.20.3
-
-## Executing OPLRAreg
+## Running OPLRAreg
 
 The command `oplrareg` runs OplraRegularised on the provided data, it accepts tabular and other space delimited files
 (.tab, .data, .dat), csv files (.csv) and Excel spreadsheets (.xls and .xlsx).
@@ -82,3 +71,13 @@ By default, OPLRAreg will determine the best number of regions to fit the data b
 the number of regions with the parameter `--regions`:
 
         oplrareg --input yacht_hydrodynamics.data --partition_feature beam_draught_ratio --regions 2
+
+## Python Requirements
+
+If you prefer to install the package manually, you need to ensure the following packages are installed:
+
+    - Pyomo 5.3
+    - scikit-learn 0.19.0
+    - scipy 0.19.1
+    - numpy 1.13.1
+    - pandas 0.20.3
