@@ -10,11 +10,7 @@ identifies independent linear equations for each region.
 
 The easiest way to install these packages is using pip:
 
-        pip install git+https://github.com/KISysBio/OPLRAreg.git
-
-Alternatively, you can download the files in this repository and run:
-
-        pip install -e oplrareg/
+        pip3 install git+https://github.com/KISysBio/OPLRAreg.git#egg=oplrareg
 
 This will install `oplrareg` package along with its dependencies and it will also create a command `oplrareg`,
 which can be used to run OPLRAreg algorithm.
