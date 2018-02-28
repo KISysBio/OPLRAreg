@@ -13,5 +13,10 @@ setup(name='oplrareg',
         'console_scripts': [
             'oplrareg = oplrareg.__main__:main'
         ]
-      }
+      },
+      python_requires='>=3',
+      classifiers=[
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6'    
+      ]
     )
