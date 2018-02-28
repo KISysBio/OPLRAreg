@@ -1,6 +1,7 @@
-from distutils.core import setup
-setup(name='oplrareg',
+from setuptools import setup
+setup(name='oplra_reg',
       description='Mixed Integer Piecewise Linear Regression with Regularisation',
+      long_description='OPLRAreg is a regression technique based on mathematical programming that splits data into separate regions and identifies independent linear equations for each region.',
       version='0.1',
       py_modules=['oplrareg'],
       author=['Jonathan Cardoso Silva'],
