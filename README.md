@@ -29,6 +29,16 @@ Alternatively, you can download [one release](https://github.com/KISysBio/OPLRAr
 This will install `oplrareg` package along with its dependencies and it will also create a command `oplrareg`,
 which can be used to run OPLRAreg algorithm.
 
+### Dependencies
+
+The following packages will be automatically installed with oplrareg:
+
+    - Pyomo 5.3
+    - scikit-learn 0.19.0
+    - scipy 0.19.1
+    - numpy 1.13.1
+    - pandas 0.20.3
+
 ## Running OPLRAreg
 
 The command `oplrareg` runs OplraRegularised on the provided data, it accepts tabular and other space delimited files
@@ -43,9 +53,6 @@ Run it with:
 or
 
         oplrareg -i <filename>
-or even
-
-        python3 <downloaded directory>/oplrareg/__main__.py -i <filename>
 
 This will execute OPLRAreg with default parameters:
 
@@ -71,13 +78,3 @@ By default, OPLRAreg will determine the best number of regions to fit the data b
 the number of regions with the parameter `--regions`:
 
         oplrareg --input yacht_hydrodynamics.data --partition_feature beam_draught_ratio --regions 2
-
-## Python Requirements
-
-If you prefer to install the package manually, you need to ensure the following packages are installed:
-
-    - Pyomo 5.3
-    - scikit-learn 0.19.0
-    - scipy 0.19.1
-    - numpy 1.13.1
-    - pandas 0.20.3
