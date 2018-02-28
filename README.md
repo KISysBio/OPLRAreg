@@ -29,7 +29,7 @@ To run oplrareg, you will need:
   - One of the following MIP solver installed in your system:
       - CPLEX 12.6.3 (commercial or academic license)
       - GLPK v4.64 (open source solver)
-        - Linux: https://www.gnu.org/software/glpk/
+        - Unix: https://www.gnu.org/software/glpk/
         - Windows: http://winglpk.sourceforge.net/
 
 ## Running OPLRAreg
