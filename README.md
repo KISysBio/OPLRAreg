@@ -5,6 +5,8 @@ Mixed Integer Piecewise Linear Regression Algorithm with Regularisation
 OPLRAreg is a regression technique based on mathematical programming that splits data into separate regions and
 identifies independent linear equations for each region.
 
+**This repository only contains the regression algorithm and is meant for general purpose use. For the application on Quantitative Structure-Activity Relationship models, please refer to: https://github.com/KISysBio/qsar-models **
+
 
 ## Requirements
 
