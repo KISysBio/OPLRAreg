@@ -3,7 +3,7 @@ setup(name='oplra_reg',
       description='Mixed Integer Piecewise Linear Regression with Regularisation',
       long_description=('OPLRAreg is a regression technique based on mathematical programming that splits '
                         'data into separate regions and identifies independent linear equations for each region.'),
-      version='0.1.0',
+      version='0.2',
       py_modules=['oplrareg'],
       author='Jonathan Cardoso Silva',
       author_email='jonathan.car.silva@gmail.com',
