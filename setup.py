@@ -3,14 +3,14 @@ setup(name='oplra_reg',
       description='Mixed Integer Piecewise Linear Regression with Regularisation',
       long_description=('OPLRAreg is a regression technique based on mathematical programming that splits '
                         'data into separate regions and identifies independent linear equations for each region.'),
-      version='0.1',
+      version='0.1.0',
       py_modules=['oplrareg'],
       author='Jonathan Cardoso Silva',
       author_email='jonathan.car.silva@gmail.com',
       url='https://github.com/KISysBio/OPLRAreg',
-      url_download='https://github.com/KISysBio/OPLRAreg/archive/v0.1.tar.gz',
+      url_download='https://github.com/KISysBio/OPLRAreg/archive/v0.1.1.tar.gz',
       keywords=[''],
-      install_requires=['numpy', 'scipy', 'pandas', 'scikit-learn', 'pyomo'],
+      install_requires=['numpy==1.13.1', 'scipy==0.19.1', 'pandas==0.20.3', 'scikit-learn==0.19.0', 'pyomo==5.3'],
       entry_points={
         'console_scripts': [
             'oplrareg = oplrareg.__main__:main'
@@ -20,6 +20,6 @@ setup(name='oplra_reg',
       python_requires='>=3',
       classifiers=[
             'Programming Language :: Python :: 3.5',
-            'Programming Language :: Python :: 3.6'    
+            'Programming Language :: Python :: 3.6'
       ]
     )
