@@ -7,12 +7,12 @@ setup(
         "OPLRAreg is a regression technique based on mathematical programming that splits "
         "data into separate regions and identifies independent linear equations for each region."
     ),
-    version="0.2",
+    version="0.2.1",
     py_modules=["oplrareg"],
     author="Jonathan Cardoso Silva",
     author_email="jonathan.car.silva@gmail.com",
     url="https://github.com/KISysBio/OPLRAreg",
-    url_download="https://github.com/KISysBio/OPLRAreg/archive/v0.1.1.tar.gz",
+    url_download="https://github.com/KISysBio/OPLRAreg/archive/v0.2.1.tar.gz",
     keywords=[""],
     install_requires=[
         "numpy >= 1.13",
