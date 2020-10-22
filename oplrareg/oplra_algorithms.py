@@ -53,7 +53,19 @@ class OplraRegularised(BaseOplraEstimator):
 
         # Defines the regions of the samples
         if self.final_model.number_regions > 1:
-            ts_region = self.final_model.get_regions(X.loc[:, self.final_model.fStar])
+            if type(X) == pd.DataFrame:
+                ts_region = self.final_model.get_regions(X.loc[:, self.final_model.fStar])
+            else:
+                # Then it is a numpy array
+
+                fStar_idx = None
+                for idx, f in enumerate(self.final_model.f):
+                    if f == self.final_model.fStar:
+                        fStar_idx = idx
+                        break
+
+                ts_region = self.final_model.get_regions(X[:, fStar_idx])
+
         else:
             ts_region = np.zeros(len(samples))
 
@@ -63,15 +75,23 @@ class OplraRegularised(BaseOplraEstimator):
         intercepts = self.final_model.get_intercepts()
 
         if len(counter_region) == 1:
+
+            which_region = counter_region.most_common(1)[0][0]
+
             final_predictions = (
-                safe_sparse_dot(X, coefficients[0], dense_output=True) + intercepts[0]
+                safe_sparse_dot(X, coefficients[which_region], dense_output=True) + intercepts[which_region]
             )
         else:
             for region, counter_region in counter_region.items():
                 samples_in_region = np.argwhere(ts_region == region).transpose()[0]
+                if type(X) == pd.DataFrame:
+                    X_samples = X.iloc[samples_in_region]
+                else:
+                    X_samples = X[samples_in_region, ]
+
                 final_predictions[samples_in_region] = (
                     safe_sparse_dot(
-                        X.iloc[samples_in_region],
+                        X_samples,
                         coefficients[region],
                         dense_output=True,
                     )

@@ -140,7 +140,9 @@ class OplraPyomoModel(ConcreteModel):
 
     def get_regions(self, f_star_series):
         samples = range(len(f_star_series))
-        f_star_series.index = samples
+
+        if type(f_star_series) == pd.Series:
+            f_star_series.index = samples
         breakpoints = self.get_breakpoints()
         regions = list(self.r)
         lo_r = {r: breakpoints[r - 1] if r != 0 else 0.0 for r in regions}
