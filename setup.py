@@ -7,7 +7,7 @@ setup(
         "OPLRAreg is a regression technique based on mathematical programming that splits "
         "data into separate regions and identifies independent linear equations for each region."
     ),
-    version="0.2.2",
+    version="0.3",
     py_modules=["oplrareg"],
     author="Jonathan Cardoso Silva",
     author_email="jonathan.car.silva@gmail.com",
